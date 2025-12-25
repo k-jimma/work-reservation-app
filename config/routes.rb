@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get "rooms/index"
+  get "rooms/new"
+  get "rooms/create"
+  get "rooms/show"
+  get "rooms/edit"
+  get "rooms/update"
+  get "rooms/destroy"
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -12,4 +19,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "home#index"
+  resources :rooms
+
 end
